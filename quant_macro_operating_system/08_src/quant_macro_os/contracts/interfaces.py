@@ -1,0 +1,19 @@
+from typing import Protocol, Any
+
+class FeatureProducer(Protocol):
+    def build(self, *args: Any, **kwargs: Any) -> Any: ...
+
+class SignalProducer(Protocol):
+    def score(self, *args: Any, **kwargs: Any) -> Any: ...
+
+class PortfolioBuilder(Protocol):
+    def optimize(self, *args: Any, **kwargs: Any) -> Any: ...
+
+class RiskController(Protocol):
+    def evaluate(self, *args: Any, **kwargs: Any) -> Any: ...
+
+class ExecutionEngine(Protocol):
+    def execute(self, *args: Any, **kwargs: Any) -> Any: ...
+
+class PerformanceAnalyzer(Protocol):
+    def analyze(self, *args: Any, **kwargs: Any) -> Any: ...

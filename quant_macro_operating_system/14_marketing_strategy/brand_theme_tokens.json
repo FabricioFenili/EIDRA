@@ -1,0 +1,21 @@
+{
+  "brand_name": "EIDRA",
+  "palette": {
+    "navy_deep": "#17386D",
+    "blue_primary": "#0B66D6",
+    "blue_bright": "#1E90FF",
+    "blue_soft": "#8CB7E8",
+    "ink": "#2E3440",
+    "background": "#F7F8FA",
+    "surface": "#FFFFFF"
+  },
+  "typography": {
+    "headline_style": "institutional uppercase",
+    "body_style": "direct scientific prose"
+  },
+  "ui_rules": {
+    "logo_usage": "primary logo on main header; monogram on compact contexts",
+    "favicon_usage": "64px favicon for app shell",
+    "social_preview_usage": "preview image for external sharing contexts"
+  }
+}

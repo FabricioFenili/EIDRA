@@ -1,0 +1,51 @@
+version: v48
+registry_name: feature_registry
+approved_features:
+  - feature_name: usd_brl_log_return
+    family: return_transform
+    source_dependencies: [petax_bacen_sgs]
+    formula: "ln(P_t / P_t_minus_1)"
+    frequency: daily
+    status: approved_for_pilot
+  - feature_name: usd_brl_volatility_20d
+    family: rolling_statistics
+    source_dependencies: [usd_brl_log_return]
+    formula: "rolling_std(log_return, 20)"
+    frequency: daily
+    status: approved_for_pilot
+  - feature_name: usd_brl_momentum_20d
+    family: momentum
+    source_dependencies: [petax_bacen_sgs]
+    formula: "pct_change(price, 20)"
+    frequency: daily
+    status: approved_for_pilot
+  - feature_name: usd_brl_momentum_60d
+    family: momentum
+    source_dependencies: [petax_bacen_sgs]
+    formula: "pct_change(price, 60)"
+    frequency: daily
+    status: approved_for_pilot
+  - feature_name: usd_brl_momentum_120d
+    family: momentum
+    source_dependencies: [petax_bacen_sgs]
+    formula: "pct_change(price, 120)"
+    frequency: daily
+    status: approved_for_pilot
+  - feature_name: usd_brl_drawdown
+    family: risk_state
+    source_dependencies: [petax_bacen_sgs]
+    formula: "current_price / rolling_peak - 1"
+    frequency: daily
+    status: approved_for_pilot
+  - feature_name: usd_brl_skewness_60d
+    family: higher_moments
+    source_dependencies: [usd_brl_log_return]
+    formula: "rolling_skew(log_return, 60)"
+    frequency: daily
+    status: approved_for_pilot
+  - feature_name: usd_brl_kurtosis_60d
+    family: higher_moments
+    source_dependencies: [usd_brl_log_return]
+    formula: "rolling_kurtosis(log_return, 60)"
+    frequency: daily
+    status: approved_for_pilot

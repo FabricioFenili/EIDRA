@@ -1,0 +1,32 @@
+CREATE TABLE IF NOT EXISTS metadata_datasets (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE,
+    source TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS metadata_features (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE,
+    description TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS metadata_pipelines (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS research_experiments (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    params_json TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS monitoring_system_runs (
+    id INTEGER PRIMARY KEY,
+    run_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status TEXT NOT NULL
+);

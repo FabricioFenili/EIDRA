@@ -1,0 +1,33 @@
+version: v48
+contract_name: data_source_contract
+fields:
+  source_name:
+    type: string
+    required: true
+  source_type:
+    type: string
+    required: true
+  provider:
+    type: string
+    required: true
+  frequency:
+    type: string
+    required: true
+  canonical_contract_name:
+    type: string
+    required: true
+  data_family:
+    type: string
+    required: true
+  update_schedule:
+    type: string
+    required: true
+  ownership:
+    type: string
+    required: true
+  schema_reference:
+    type: string
+    required: true
+  publish_target:
+    type: string
+    required: true

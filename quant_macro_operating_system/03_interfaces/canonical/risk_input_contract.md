@@ -1,0 +1,1 @@
+# Risk Input Contract

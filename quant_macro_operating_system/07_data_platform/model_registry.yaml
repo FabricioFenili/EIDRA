@@ -1,0 +1,16 @@
+version: v48
+registry_name: model_registry
+models:
+  - model_name: ptax_momentum_baseline
+    family: time_series
+    class: autoregressive_baseline
+    training_window: rolling
+    target_variable: usd_brl_log_return
+    candidate_features:
+      - usd_brl_momentum_20d
+      - usd_brl_momentum_60d
+      - usd_brl_momentum_120d
+      - usd_brl_volatility_20d
+    calibration: required
+    retirement_policy: see_12_docs_research_doctrine_model_retirement_policy
+    status: pilot_candidate

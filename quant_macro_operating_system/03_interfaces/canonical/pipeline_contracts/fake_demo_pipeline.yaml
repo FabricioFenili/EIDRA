@@ -1,0 +1,12 @@
+{
+  "artifact_type": "pipeline",
+  "name": "fake_demo_pipeline",
+  "source_name": "fake_demo_source",
+  "steps": [
+    "source",
+    "ingest",
+    "normalize",
+    "validate",
+    "publish"
+  ]
+}

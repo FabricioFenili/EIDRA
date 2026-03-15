@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quant-macro-operating-system"
+version = "0.1.0"
+description = "Quant Macro Operating System"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["09_tests"]
+pythonpath = ["08_src"]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100

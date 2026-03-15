@@ -1,0 +1,19 @@
+version: v48
+registry_name: signal_registry
+signals:
+  - signal_name: ptax_momentum_signal
+    origin_family: time_series_predictability
+    underlying_features:
+      - usd_brl_momentum_20d
+      - usd_brl_momentum_60d
+      - usd_brl_momentum_120d
+      - usd_brl_volatility_20d
+    calibration_method: quantile_signal
+    targeted_ranges:
+      very_weak: [0, 20]
+      weak: [20, 40]
+      neutral: [40, 60]
+      strong: [60, 80]
+      extreme: [80, 100]
+    output_contract: signal_interface_contract
+    status: pilot_defined

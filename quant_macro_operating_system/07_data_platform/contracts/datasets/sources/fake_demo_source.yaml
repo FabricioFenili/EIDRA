@@ -1,0 +1,13 @@
+{
+  "artifact_type": "source",
+  "name": "fake_demo_source",
+  "source_type": "manual",
+  "config": {
+    "records": [
+      {
+        "value": 1
+      }
+    ],
+    "description": "fake_source_for_smoke"
+  }
+}
